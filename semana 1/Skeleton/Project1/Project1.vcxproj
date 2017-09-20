@@ -122,10 +122,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BezierCurves.cpp" />
+    <ClCompile Include="Main.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Source1.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Malla2D.h" />
     <ClInclude Include="Poligono2D.h" />
     <ClInclude Include="Punto.h" />
     <ClInclude Include="Renderer.h" />

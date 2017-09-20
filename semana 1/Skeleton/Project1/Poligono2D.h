@@ -3,36 +3,37 @@
 #include "Punto.h"
 class Poligono2D {
 private:
-	vector<Punto2D> vertices;
+	vector<Punto2D*> vertices;
 	int nV;
 public:
 	Poligono2D(int nV)
 	{
 		this->nV = nV;
-		this->vertices[nV];
+		vertices= vector<Punto2D*>();
+
 		for (int i = 0; i < nV; i++)
-			this->vertices[i];
+			vertices.push_back(new Punto2D());
 	}
-	Punto2D getVertice(int p)
+	Punto2D* getVertice(int p)
 	{
 		return vertices[p];
 	}
 	void setVertice(int p, Punto2D* v)
 	{
-		vertices[p].SetX(v->GetX());
-		vertices[p].SetY(v->GetY());
+		vertices[p][0].SetX(v->GetX());
+		vertices[0][p].SetY(v->GetY());
 	}
 	void setVertice(int p, double x, double y)
 	{
-		vertices[p].SetX(x);
-		vertices[p].SetY(y);
+		vertices[p][0].SetX(x);
+		vertices[0][p].SetY(y);
 	}
 	int cantidadVertices()
 	{
 		return nV;
 	}
 
-	void Trasladar(double dx, double dy)
+	/*void Trasladar(double dx, double dy)
 	{
 		for (int i = 0; i < nV; i++)
 			vertices[i].Trasladar(dx, dy);
@@ -41,7 +42,6 @@ public:
 	{
 		for (int i = 0; i < nV; i++)
 			vertices[i].Escalar(base, sx, sy);
-		
 	}
 
 	void Rotar(Punto2D* base, double a)
@@ -49,5 +49,5 @@ public:
 		for (int i = 0; i < nV; i++)
 			vertices[i].Rotar(base, a);
 		
-	}
+	}*/
 };

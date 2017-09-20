@@ -3,10 +3,11 @@
 using namespace std;
 class Punto2D {
 private:
-	//zdouble x, y, z;
+	double x, y;
 
 public:
-	double x, y, z;
+	//Bezier
+	/*double x, y, z;
 	Punto2D()
 	{
 		x = y = z = 0;
@@ -17,6 +18,16 @@ public:
 		this->x = x;
 		this->y = y;
 		this->z = 0;
+	}*/
+
+	Punto2D(double x, double y):x(x),y(y)
+	{
+	}
+
+	Punto2D()
+	{
+		this->x = 0;
+		this->y = 0;
 	}
 
 	double GetX()
@@ -39,13 +50,14 @@ public:
 		this->y = y;
 	}
 
-	const Punto2D & operator=(const Punto2D &rPunto2D)
+	//Bezier
+	/*const Punto2D & operator=(const Punto2D &rPunto2D)
 	{
 		x = rPunto2D.x;
 		y = rPunto2D.y;
 		z = rPunto2D.z;
 		return *this;
-	}
+	}*/
 
 
 	void Trasladar(double dx, double dy)
@@ -76,8 +88,10 @@ public:
 
 		ca = cos(a);
 		sa = sin(a);
+		
 		xp = x*ca - y*sa;
 		y = x*sa + y*ca;
+		
 		x = xp;
 		/*return this;*/
 	}
@@ -90,5 +104,10 @@ public:
 		return this;
 	}
 
+	bool equals(Punto2D p)
+	{
+		Punto2D b = p;
+		return x == p.GetX() && y == p.GetY();
+	}
 
 };

@@ -20,34 +20,34 @@ public:
 	}
 	void setVertice(int p, Punto2D* v)
 	{
-		vertices[p][0].SetX(v->GetX());
-		vertices[0][p].SetY(v->GetY());
+		vertices[p]->setX(v->getX());
+		vertices[p]->setY(v->getY());
 	}
 	void setVertice(int p, double x, double y)
 	{
-		vertices[p][0].SetX(x);
-		vertices[0][p].SetY(y);
+		vertices[p]->setX(x);
+		vertices[p]->setY(y);
 	}
 	int cantidadVertices()
 	{
 		return nV;
 	}
 
-	/*void Trasladar(double dx, double dy)
+	void Trasladar(double dx, double dy)
 	{
 		for (int i = 0; i < nV; i++)
-			vertices[i].Trasladar(dx, dy);
+			vertices[i]->Trasladar(dx, dy);
 	}
-	void Escalar(Punto2D* base, double sx, double sy)
+	void Escalar(Punto2D base, double sx, double sy)
 	{
 		for (int i = 0; i < nV; i++)
-			vertices[i].Escalar(base, sx, sy);
+			vertices[i]->Escalar(base, sx, sy);
 	}
 
-	void Rotar(Punto2D* base, double a)
+	void Rotar(Punto2D base, double a)
 	{
 		for (int i = 0; i < nV; i++)
-			vertices[i].Rotar(base, a);
+			vertices[i]->Rotar(base, a);
 		
-	}*/
+	}
 };

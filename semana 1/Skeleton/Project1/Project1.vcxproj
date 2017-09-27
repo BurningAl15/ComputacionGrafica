@@ -123,6 +123,7 @@
   <ItemGroup>
     <ClCompile Include="BezierCurves.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="PractisingBasics.cpp" />
     <ClCompile Include="Recortes de poligonos.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Source1.cpp" />

@@ -140,8 +140,6 @@ public:
 		Trasladar(-base.getX(), -base.getY());
 		Escalar(sx, sy);
 		Trasladar(base.getX(), base.getY());
-		
-
 	}
 	void Rotar(double a)
 	{

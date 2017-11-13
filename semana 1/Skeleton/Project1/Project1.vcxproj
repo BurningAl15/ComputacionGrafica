@@ -122,11 +122,19 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BezierCurves.cpp" />
+    <ClCompile Include="KeyCapture.cpp" />
+    <ClCompile Include="Luces_OpenGL.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Modelo1.cpp" />
+    <ClCompile Include="Practica_Parcial.cpp" />
     <ClCompile Include="PractisingBasics.cpp" />
     <ClCompile Include="Recortes de poligonos.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Source1.cpp" />
+    <ClCompile Include="Trabajo1.cpp" />
+    <ClCompile Include="Trabajo2.cpp" />
+    <ClCompile Include="TrabajoFinal.cpp" />
+    <ClCompile Include="TrabajoParcial_Vera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClipLines.h" />

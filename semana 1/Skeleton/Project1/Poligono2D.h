@@ -50,4 +50,6 @@ public:
 			vertices[i]->Rotar(base, a);
 		
 	}
+
+
 };

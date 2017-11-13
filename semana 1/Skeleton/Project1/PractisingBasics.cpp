@@ -1,16 +1,30 @@
 //#include "libs\glut.h"
 //#include <stdlib.h>
+//#include <iostream>
+////#include <cstdlib>
+//#include <ctime>
+//#include <windows.h>
 //
+//double posx = -20.f;
+//double posy = -20.f;
+//double posz = rand() % 100 - 20.f;
+//float figX = -5.f, figY=-5.f;
+//
+//
+//double angle = 0.f;
+//double scale = 0.1f;
 //using namespace std;
-////
-////void initializing()
-////{
-////	//Inicializar el color del buffer
-////	glClearColor(0, 0, 0, 0);
-////}
-////
+//int vertices = 0;
+//void initializing()
+//{
+//	//Inicializar el color del bufferx	
+//	glClearColor(0, 0, 0, 0);
+//}
+//
 //void Disp()
 //{
+//	srand(time(nullptr));
+//	vertices = rand() % 4 + 3;
 //	//Matriz de camara, matriz del model
 //	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 //	glMatrixMode(GL_MODELVIEW);
@@ -18,42 +32,91 @@
 //	//Cargar la matriz de identidad
 //	glLoadIdentity();
 //
+//	glPushMatrix();
 //	//Realizar una translación de la escena(model,camara)
-//	glTranslatef(-25, -30, -50);
+//	glTranslatef(posy, posx, posz-200);
+//	glRotatef(angle, posy, posx, posz-200);
+//	glScalef(posy*scale, posx*scale, -200);
+//	
+//	float r, g, b;
+//	float aumento=0.1f;
+//	
+//	for (int i = 0; i < 1; i++)
+//	{
+//		r = static_cast <float> (rand()) / static_cast <float> (10000);
+//		g = static_cast <float> (rand()) / static_cast <float> (10000);
+//		b = static_cast <float> (rand()) / static_cast <float> (10000);
+//		posz = rand() % 50 - 20.f;
+//		figX= rand() % 80 - 50.f;
+//		figY = rand() % 80 - 50.f;
+//		
+//		switch (vertices)
+//		{
+//		case 3:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX+25, figY+10, 0);
+//			glVertex3f(figX+37.5f, figY+30, 0);
+//			glVertex3f(figX+50, figY+10, 0);
+//			break;
+//		case 4:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX+25, figY+10, 0);
+//			glVertex3f(figX+25, figY + 30, 0);
+//			glVertex3f(figX+50, figY + 30, 0);
+//			glVertex3f(figX+50, figY + 10, 0);
+//			break;
+//		case 5:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX + 25, figY + 10, 0);
+//			glVertex3f(figX + 25, figY + 30, 0);
+//			glVertex3f(figX + 37.5f, figY + 40, 0);
+//			glVertex3f(figX + 50, figY + 30, 0);
+//			glVertex3f(figX + 50, figY + 10, 0);
+//			break;
+//		case 6:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX + 25, figY + 5, 0);
+//			glVertex3f(figX + 10, figY + 20, 0);
+//			glVertex3f(figX + 25, figY + 35, 0);
+//			glVertex3f(figX + 50, figY + 35, 0);
+//			glVertex3f(figX + 65, figY + 20, 0);
+//			glVertex3f(figX + 50, figY + 5, 0);
+//			break;
+//		case 7:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX + 25, figY + 5, 0);
+//			glVertex3f(figX + 10, figY + 20, 0);
+//			glVertex3f(figX + 25, figY + 35, 0);
+//			glVertex3f(figX + 37.5f, figY + 45, 0);
+//			glVertex3f(figX + 50, figY + 35, 0);
+//			glVertex3f(figX + 65, figY + 20, 0);
+//			glVertex3f(figX + 50, figY + 5, 0);
+//			break;
+//		
+//		default:
+//			glBegin(GL_POLYGON);
+//			glColor3f(r, g, b);
+//			glVertex3f(figX + 25, figY + 10, 0);
+//			glVertex3f(figX + 37.5f, figY + 30, 0);
+//			glVertex3f(figX + 50, figY + 10, 0);
+//			break;
+//		}
+//		glEnd();
+//		vertices=rand() % 4 + 3;
+//		
+//		angle++;
+//		Sleep(2);
+//	}
 //
-//	//glRotatef(-45, 1, 1, 0);
-//
-//	glColor3f(0.3f, 0.3f, 0.3f);
-//	////Grid
-//	//glBegin(GL_LINES);
-//	//glColor3f(1.f, 0.f, 0.f);
-//	//for (int i = 0; i <= 30; i++)
-//	//{
-//	//	//glVertex3f(0,i,0);
-//	//	//glVertex3f(30,i,0);
-//	//	////En Y (Vertical)
-//	//	//glVertex3f(i, 0, 0); //Punto inicial
-//	//	//glVertex3f(i, 30, 0); //Punto Final
-//
-//	//	glVertex3f(0, 0, 0); //Punto inicial
-//	//	glVertex3f(30, 30, 0); //Punto Final
-//	//}
-//	//glEnd();
-//
-//	glBegin(GL_QUADS);
-//	glColor3f(0.f, 0.f, 1.f);
-//	//glVertex3f(100, 200, 0);
-//	/*for (int i = 0; i <= 50; i++)
-//	{*/
-//		glVertex3f(25, 10, 0);
-//		glVertex3f(25, 30, 0);
-//		glVertex3f(50, 10, 0);
-//		glVertex3f(50, 30, 0);
-//	//}
-//	glEnd();
-//
+//	
+//	glPopMatrix();
 //	glutSwapBuffers();
-//	glFlush();
+//	glFlush(); glutPostRedisplay();
 //}
 //
 //
@@ -65,29 +128,31 @@
 //	glLoadIdentity();
 //
 //	//Modifica la perspectiva en frustrum(por revisar)
-//	gluPerspective(45.0, (GLdouble)w / (GLdouble)h, 1.0, 200.0);
+//	gluPerspective(45.0, (GLdouble)w / (GLdouble)h, 1.0, 400.0);
 //}
+//
 //
 //
 //int main()
 //{
 //	//Inicializar Glut
 //	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB /*| GLUT_DEPTH*/);
-//	glutInitWindowSize(800, 600);
+//	glutInitWindowPosition(50, 50);
+//	glutInitWindowSize(1600, 1080);
 //	
 //	//Crear ventanas
 //	glutCreateWindow("Basics");
 //	//initializing();
 //
 //	//funciones manipuladoras
+//
 //	glutDisplayFunc(Disp);
 //	glutReshapeFunc(Reshape);
-//
-//
+//	
 //	//Loop principal
 //	glutMainLoop();
 //
 //	return EXIT_SUCCESS;
 //}
-//
-//
+
+
